@@ -1,3 +1,6 @@
+import React from "react";
+import Statistics from '../components/Statistics';
+
 export const App = () => {
   return (
     <div
@@ -10,8 +13,14 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      something
-    </div>
+    </div>,
+    <>
+
+      <Statistics />
+
+  </>
   );
+
 };
+
 
