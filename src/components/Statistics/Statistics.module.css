@@ -1,38 +1,3 @@
-
-.feedback {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 30px;
-    width: 300px;
-    margin: 0 auto;
-}
-.title, .statistics {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    margin: 0 auto 20px;
-}
-
-.buttonsList {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin: 0 auto 50px;
-}
-
-.buttonsItem {
-width: 85px;
-}
-.buttonsItem > button {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #E3D3D9;
-    border-radius: 5px;
-    font-size: 18px;
-    background-color: #FFEDF4;
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3)
-}
 .statisticsList {
     font-size: 18px;
     width: 120px;
