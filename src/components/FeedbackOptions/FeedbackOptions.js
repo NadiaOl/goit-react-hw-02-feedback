@@ -1,35 +1,25 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import css from './FeedbackOptions.module.css';
 
-export const FeedbackOptions =({handleIncrementGood, handleIncrementNeutral, handleIncrementBad}) => {
+
+export const FeedbackOptions =({options, onLeaveFeedback}) => {
     return (
         <ul className={css.buttonsList}>
-        <li className={css.buttonsItem}>
+        {options.map(name => (
+            <li className={css.buttonsItem}
+            key={name}>
             <button type="button"
-                onClick={event => {
-                    handleIncrementGood();
+                onClick={() => {
+                    onLeaveFeedback(name);
                 }}>
-                Good
+                {name}
             </button>
-
-        </li>
-        <li className={css.buttonsItem}>
-            <button type="button"
-                onClick={event =>
-                    {handleIncrementNeutral()
-                }}>
-                Neutral
-            </button>
-        </li>
-        <li className={css.buttonsItem}>
-            <button type="button"
-                onClick={event =>
-                    {handleIncrementBad()
-                }}>
-                Bad
-            </button>
-        </li>
+        </li>))}
     </ul>
     )
+}
+FeedbackOptions.propTypes = {
+    options: PropTypes.PropTypes.arrayOf(PropTypes.string).isRequired,
 }
